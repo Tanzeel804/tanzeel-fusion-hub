@@ -80,10 +80,27 @@ export default {
             height: "0",
           },
         },
+        "typewriter": {
+          "0%": { width: "0" },
+          "50%": { width: "100%" },
+          "100%": { width: "0" }
+        },
+        "pulse-badge": {
+          "0%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.1)", boxShadow: "0 0 30px hsl(260 75% 60% / 0.3)" },
+          "100%": { transform: "scale(1)" }
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "typewriter": "typewriter 4s steps(40) infinite",
+        "pulse-badge": "pulse-badge 2s infinite", 
+        "float": "float 3s ease-in-out infinite"
       },
     },
   },

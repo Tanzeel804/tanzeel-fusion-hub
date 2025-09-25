@@ -2,41 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Tanzeel's Store Design System - Dark-focused with beautiful gradients */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark theme colors */
+    --background: 225 15% 6%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 225 15% 8%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 225 15% 8%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
+    /* Brand colors - Purple to blue gradient theme */
+    --primary: 260 75% 60%;
     --primary-foreground: 210 40% 98%;
+    --primary-glow: 270 70% 70%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 215 25% 15%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 215 25% 12%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 260 50% 20%;
+    --accent-foreground: 260 75% 80%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 75% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 215 25% 15%;
+    --input: 215 25% 12%;
+    --ring: 260 75% 60%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(260 75% 60%), hsl(240 75% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(225 15% 8%), hsl(215 25% 12%));
+    --gradient-hero: linear-gradient(135deg, hsl(260 75% 15%), hsl(240 75% 20%), hsl(220 75% 25%));
+    --gradient-card: linear-gradient(135deg, hsl(225 15% 8%), hsl(215 25% 10%));
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* Shadows with glow effect */
+    --shadow-glow: 0 0 30px hsl(260 75% 60% / 0.3);
+    --shadow-card: 0 10px 30px -5px hsl(225 15% 0% / 0.3);
+    --shadow-hover: 0 20px 40px -10px hsl(260 75% 60% / 0.2);
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +117,119 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary-glow));
+  }
+}
+
+@layer components {
+  /* Gradient backgrounds */
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .bg-gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+  
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+
+  /* Glow effects */
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-hover {
+    box-shadow: var(--shadow-hover);
+  }
+
+  /* Custom button variants */
+  .btn-hero {
+    @apply bg-gradient-primary text-primary-foreground font-semibold py-3 px-6 rounded-lg;
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-glow;
+    @apply border border-primary/30;
+  }
+  
+  .btn-secondary {
+    @apply bg-gradient-secondary text-foreground font-medium py-2 px-4 rounded-lg;
+    @apply transition-all duration-300 hover:bg-accent border border-border;
+  }
+
+  /* Card components */
+  .card-glow {
+    @apply bg-gradient-card border border-border/50 rounded-xl p-6;
+    @apply transition-all duration-300 hover:shadow-card hover:scale-[1.02];
+  }
+  
+  .product-card {
+    @apply bg-gradient-card border border-border/30 rounded-xl overflow-hidden;
+    @apply transition-all duration-300 hover:shadow-hover hover:scale-[1.03];
+  }
+
+  /* Typewriter effect */
+  .typewriter {
+    @apply inline-block overflow-hidden whitespace-nowrap;
+    animation: typewriter 4s steps(40) infinite;
+  }
+  
+  @keyframes typewriter {
+    0% { width: 0; }
+    50% { width: 100%; }
+    100% { width: 0; }
+  }
+
+  /* Pulse animation for cart badge */
+  .pulse-badge {
+    animation: pulseBadge 2s infinite;
+  }
+  
+  @keyframes pulseBadge {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); box-shadow: var(--shadow-glow); }
+    100% { transform: scale(1); }
+  }
+
+  /* Floating animation */
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
