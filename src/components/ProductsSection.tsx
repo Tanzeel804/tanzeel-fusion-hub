@@ -70,6 +70,32 @@ export const ProductsSection: React.FC = () => {
     });
   };
 
+  const getGradientClass = (gradientName: string) => {
+    const gradients: { [key: string]: string } = {
+      'gradient-blue-purple': 'bg-gradient-to-br from-blue-400 to-purple-600',
+      'gradient-green-blue': 'bg-gradient-to-br from-green-400 to-blue-500',
+      'gradient-orange-red': 'bg-gradient-to-br from-orange-400 to-red-500',
+      'gradient-purple-pink': 'bg-gradient-to-br from-purple-400 to-pink-500',
+      'gradient-yellow-orange': 'bg-gradient-to-br from-yellow-400 to-orange-500',
+      'gradient-teal-cyan': 'bg-gradient-to-br from-teal-400 to-cyan-500',
+      'gradient-indigo-purple': 'bg-gradient-to-br from-indigo-400 to-purple-500',
+      'gradient-pink-rose': 'bg-gradient-to-br from-pink-400 to-rose-500',
+      'gradient-emerald-teal': 'bg-gradient-to-br from-emerald-400 to-teal-500',
+      'gradient-slate-gray': 'bg-gradient-to-br from-slate-400 to-gray-600',
+      'gradient-lime-green': 'bg-gradient-to-br from-lime-400 to-green-500',
+      'gradient-blue-indigo': 'bg-gradient-to-br from-blue-400 to-indigo-600',
+      'gradient-violet-purple': 'bg-gradient-to-br from-violet-400 to-purple-600',
+      'gradient-rose-pink': 'bg-gradient-to-br from-rose-400 to-pink-500',
+      'gradient-cyan-blue': 'bg-gradient-to-br from-cyan-400 to-blue-500',
+      'gradient-amber-orange': 'bg-gradient-to-br from-amber-400 to-orange-500',
+      'gradient-red-pink': 'bg-gradient-to-br from-red-400 to-pink-500',
+      'gradient-emerald-green': 'bg-gradient-to-br from-emerald-400 to-green-500',
+      'gradient-sky-blue': 'bg-gradient-to-br from-sky-400 to-blue-500',
+      'gradient-fuchsia-purple': 'bg-gradient-to-br from-fuchsia-400 to-purple-600'
+    };
+    return gradients[gradientName] || 'bg-gradient-secondary';
+  };
+
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
@@ -172,12 +198,10 @@ export const ProductsSection: React.FC = () => {
                 {categoryProducts.map(product => (
                   <Card key={product.id} className="product-card group cursor-pointer">
                     <CardHeader className="pb-3">
-                      <div className="aspect-square bg-gradient-secondary rounded-lg mb-3 overflow-hidden">
-                        <img
-                          src={product.images[0]}
-                          alt={product.name}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
+                      <div className={`aspect-square rounded-lg mb-3 ${getGradientClass(product.images[0])} group-hover:scale-105 transition-transform duration-300 flex items-center justify-center`}>
+                        <div className="text-white/80 text-4xl font-bold">
+                          {product.brand.charAt(0)}
+                        </div>
                       </div>
                       <div className="space-y-1">
                         <Badge variant="secondary" className="text-xs">

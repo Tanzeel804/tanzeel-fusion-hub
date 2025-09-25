@@ -67,7 +67,7 @@ export const ProfileSection: React.FC = () => {
             <CardContent className="space-y-4">
               <div className="flex items-center justify-center gap-2 text-muted-foreground">
                 <MapPin className="w-4 h-4" />
-                <span>San Francisco, CA</span>
+                <span>Pakistan</span>
               </div>
 
               <div className="flex items-center justify-center gap-2 text-muted-foreground">
@@ -112,10 +112,10 @@ export const ProfileSection: React.FC = () => {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground leading-relaxed">
-                Passionate full-stack developer with 5+ years of experience building scalable web applications. 
-                Specialized in React, Node.js, and cloud technologies. Currently focused on creating exceptional 
-                e-commerce experiences and modern web solutions. Always eager to learn new technologies and 
-                contribute to meaningful projects.
+                Passionate Software Engineering student from Pakistan with a strong interest in full-stack development. 
+                Currently learning modern web technologies including React, Node.js, and cloud services. 
+                Focused on building innovative web applications and e-commerce solutions. Always excited to 
+                learn new technologies and work on meaningful projects.
               </p>
             </CardContent>
           </Card>
@@ -148,9 +148,10 @@ export const ProfileSection: React.FC = () => {
             <CardContent>
               <div className="space-y-3">
                 <div>
-                  <h4 className="font-semibold">Bachelor of Computer Science</h4>
-                  <p className="text-muted-foreground">Stanford University • 2018-2022</p>
-                  <p className="text-sm text-muted-foreground">Graduated Magna Cum Laude, GPA: 3.8/4.0</p>
+                  <h4 className="font-semibold">Bachelor of Software Engineering</h4>
+                  <p className="text-muted-foreground">Currently Studying • Pakistan</p>
+                  <p className="text-sm text-muted-foreground">Email: tanzeelahmed412@gmail.com</p>
+                  <p className="text-sm text-muted-foreground">Phone: +92 310 1400966</p>
                 </div>
               </div>
             </CardContent>

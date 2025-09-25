@@ -1,8 +1,4 @@
 import { Product } from '@/contexts/CartContext';
-import shoeImage from '@/assets/shoe-1.jpg';
-import bagImage from '@/assets/bag-1.jpg';
-import techImage from '@/assets/tech-1.jpg';
-import clothingImage from '@/assets/clothing-1.jpg';
 
 export const products: Product[] = [
   // Shoes
@@ -14,7 +10,7 @@ export const products: Product[] = [
     price: 149.99,
     rating: 4.8,
     category: 'shoes',
-    images: [shoeImage, shoeImage]
+    images: ['gradient-blue-purple', 'gradient-blue-purple']
   },
   {
     id: 2,
@@ -24,7 +20,7 @@ export const products: Product[] = [
     price: 179.99,
     rating: 4.7,
     category: 'shoes',
-    images: [shoeImage, shoeImage]
+    images: ['gradient-green-blue', 'gradient-green-blue']
   },
   {
     id: 3,
@@ -34,7 +30,7 @@ export const products: Product[] = [
     price: 129.99,
     rating: 4.6,
     category: 'shoes',
-    images: [shoeImage, shoeImage]
+    images: ['gradient-orange-red', 'gradient-orange-red']
   },
   {
     id: 4,
@@ -44,7 +40,7 @@ export const products: Product[] = [
     price: 119.99,
     rating: 4.5,
     category: 'shoes',
-    images: [shoeImage, shoeImage]
+    images: ['gradient-purple-pink', 'gradient-purple-pink']
   },
   {
     id: 5,
@@ -54,7 +50,7 @@ export const products: Product[] = [
     price: 89.99,
     rating: 4.4,
     category: 'shoes',
-    images: [shoeImage, shoeImage]
+    images: ['gradient-yellow-orange', 'gradient-yellow-orange']
   },
 
   // Bags  
@@ -66,7 +62,7 @@ export const products: Product[] = [
     price: 89.99,
     rating: 4.7,
     category: 'bags',
-    images: [bagImage, bagImage]
+    images: ['gradient-teal-cyan', 'gradient-teal-cyan']
   },
   {
     id: 7,
@@ -76,7 +72,7 @@ export const products: Product[] = [
     price: 69.99,
     rating: 4.6,
     category: 'bags',
-    images: [bagImage, bagImage]
+    images: ['gradient-indigo-purple', 'gradient-indigo-purple']
   },
   {
     id: 8,
@@ -86,7 +82,7 @@ export const products: Product[] = [
     price: 199.99,
     rating: 4.8,
     category: 'bags',
-    images: [bagImage, bagImage]
+    images: ['gradient-pink-rose', 'gradient-pink-rose']
   },
   {
     id: 9,
@@ -96,7 +92,7 @@ export const products: Product[] = [
     price: 79.99,
     rating: 4.5,
     category: 'bags',
-    images: [bagImage, bagImage]
+    images: ['gradient-emerald-teal', 'gradient-emerald-teal']
   },
   {
     id: 10,
@@ -106,7 +102,7 @@ export const products: Product[] = [
     price: 39.99,
     rating: 4.3,
     category: 'bags',
-    images: [bagImage, bagImage]
+    images: ['gradient-slate-gray', 'gradient-slate-gray']
   },
 
   // Clothes
@@ -118,7 +114,7 @@ export const products: Product[] = [
     price: 19.99,
     rating: 4.4,
     category: 'clothes',
-    images: [clothingImage, clothingImage]
+    images: ['gradient-lime-green', 'gradient-lime-green']
   },
   {
     id: 12,
@@ -128,7 +124,7 @@ export const products: Product[] = [
     price: 89.99,
     rating: 4.7,
     category: 'clothes',
-    images: [clothingImage, clothingImage]
+    images: ['gradient-blue-indigo', 'gradient-blue-indigo']
   },
   {
     id: 13,
@@ -138,7 +134,7 @@ export const products: Product[] = [
     price: 79.99,
     rating: 4.6,
     category: 'clothes',
-    images: [clothingImage, clothingImage]
+    images: ['gradient-violet-purple', 'gradient-violet-purple']
   },
   {
     id: 14,
@@ -148,7 +144,7 @@ export const products: Product[] = [
     price: 59.99,
     rating: 4.5,
     category: 'clothes',
-    images: [clothingImage, clothingImage]
+    images: ['gradient-rose-pink', 'gradient-rose-pink']
   },
   {
     id: 15,
@@ -158,7 +154,7 @@ export const products: Product[] = [
     price: 69.99,
     rating: 4.4,
     category: 'clothes',
-    images: [clothingImage, clothingImage]
+    images: ['gradient-cyan-blue', 'gradient-cyan-blue']
   },
 
   // Tech
@@ -170,7 +166,7 @@ export const products: Product[] = [
     price: 299.99,
     rating: 4.9,
     category: 'tech',
-    images: [techImage, techImage]
+    images: ['gradient-amber-orange', 'gradient-amber-orange']
   },
   {
     id: 17,
@@ -180,7 +176,7 @@ export const products: Product[] = [
     price: 399.99,
     rating: 4.8,
     category: 'tech',
-    images: [techImage, techImage]
+    images: ['gradient-red-pink', 'gradient-red-pink']
   },
   {
     id: 18,
@@ -190,7 +186,7 @@ export const products: Product[] = [
     price: 29.99,
     rating: 4.5,
     category: 'tech',
-    images: [techImage, techImage]
+    images: ['gradient-emerald-green', 'gradient-emerald-green']
   },
   {
     id: 19,
@@ -200,7 +196,7 @@ export const products: Product[] = [
     price: 89.99,
     rating: 4.6,
     category: 'tech',
-    images: [techImage, techImage]
+    images: ['gradient-sky-blue', 'gradient-sky-blue']
   },
   {
     id: 20,
@@ -210,6 +206,6 @@ export const products: Product[] = [
     price: 79.99,
     rating: 4.7,
     category: 'tech',
-    images: [techImage, techImage]
+    images: ['gradient-fuchsia-purple', 'gradient-fuchsia-purple']
   }
 ];
